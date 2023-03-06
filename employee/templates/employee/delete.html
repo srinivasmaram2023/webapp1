@@ -1,0 +1,16 @@
+<title>Delete</title>
+<form action="" method="POST">
+    {% csrf_token %}
+    <br><br>
+    <div>
+        Are you sure you want to delete "{{ employee.emp_name }}"?
+    </div>
+    
+    <p>
+        <a href="{% url 'employees-list' %}"> <-- Go back</a>
+    </p>
+
+    <p>
+        <input type="submit" value="Confirm">
+    </p>
+</form>
